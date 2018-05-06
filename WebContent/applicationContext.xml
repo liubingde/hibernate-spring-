@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="dbutil" class="dao.DButil" autowire="byName"></bean>
+	<bean id="dbupdate" class="dao.DBupdate"></bean>
+	<bean id="dbdelete" class="dao.DBdelete"></bean>
+	<bean id="dbinsert" class="dao.DBinsert"></bean>
+	<bean id="userbean" class="bean.UserBean" scope="singleton" >
+		
+	</bean>
+	<bean id="sf" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">  
+        <property name="configLocations">  
+            <value>classpath:hibernate.cfg.xml</value>  
+        </property>  
+    </bean> 
+</beans>

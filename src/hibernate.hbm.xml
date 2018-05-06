@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+<class name="bean.AdminInfo" table="admininfo">
+	<id name="aid" type="int" column="Aid" >
+		<generator class="increment"/>
+	</id>
+	<property name="aname" column="Aname" type="string"/>
+	<property name="apwd" column="Apwd" type="string"/>
+	<property name="alevel" column="Alevel" type="int"/>
+</class>
+<class name="bean.GoodsClassInfo" table="goodsclassinfo">
+	<id name="gcid" type="int" column="Gcid">
+		<generator class="increment"/>
+	</id>
+	<property name="gcname" column="Gcname" type="string"/>
+</class>
+<class name="bean.GoodsInfo" table="goodsinfo">
+	<id name="gid" column="Gid" type="int">
+		<generator class="increment"/>
+	</id>
+	<property name="gname" column="Gname" type="string"></property>
+	<property name="gunit" column="Gunit" type="string"></property>
+	<property name="gpin" column="Gpin" type="string"></property>
+	<property name="gout" column="Gout" type="string"></property>
+	<property name="gamount" column="Gamount" type="string"></property>
+	<property name="gcid" column="Gcid" type="int"></property>
+</class>
+
+</hibernate-mapping>
